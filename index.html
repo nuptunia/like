@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab - Like</title>
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+<body style="position: relative;">
+    <style>
+        #waves-background{
+            width: 100%;
+            height: 152.9vh;
+            position: absolute;
+            z-index: -1;
+            overflow: hidden;
+            overflow-y: hidden;
+
+        }   
+    </style>
+    <div class="userInfo">
+        <div id="os"></div>
+        <div id="useragent"></div>
+</div>
+    <div class="container">
+        <div id="waves-background"></div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+
+        <div class="time">
+            <h2 class="whiteGlow" id="time"></h2>
+        </div>
+
+        <div>
+            <input id="searchbox" type="text" class="searchbox" placeholder="What's on your mind?">
+            <input id="searchgo" type="submit" class="submit" value=">">
+        </div>
+
+        <a class="quickButtons" href="https://github.com">Github</a>
+        <a class="quickButtons" href="https://youtube.com">YouTube</a>
+
+    </div>
+
+    <div id="like_sidebar" class="sidebar">
+
+        <div class="sidebar-align">   
+            <a href="#" onclick="openWindow()">
+                <div class="tooltip">
+                </div>
+
+                <div id="AppResizeHandle">
+
+                </div>
+                <div id="windowComponents" class="windowOverlay">
+                    <div class="windowOverlayContents">
+                        <a class="windowOverlayClose" onclick="closeWindow()">x</a>
+                        <p>
+                            <div class="windowIFrame">
+                            </div>
+                        </p>
+                    </div>
+                </div>
+
+    <div class="bottomBar">
+        <button id="open_sidebar" class="sidebar-open" href="#" onclick="openSidebar()">Open</button>
+        <button id="close_sidebar" class="sidebar-close" href="#" onclick="closeSidebar()">Close</button>
+
+    </div>
+    <script>
+        VANTA.WAVES({
+            el: "#waves-background",
+            color: 0x000000,
+            shininess: 50,
+            waveHeight: 20,
+            waveSpeed: 0.5,
+            zoom: 1
+        });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

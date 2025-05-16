@@ -1,0 +1,268 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background: rgb(36, 35, 35);
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #fff;
+    color: white;
+    background-color: transparent;
+    background: transparent;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.whiteGlow{
+    text-shadow: 1px 1px 10px #fff, 1px 1px 10px #fff;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+.searchbox{
+    flex-grow: 1;
+    color: white;
+    height: 35px;
+    width: 300px;
+    max-width: 100%;
+    background-color: rgb(34, 32, 32);
+    border: 0px  solid #fff;
+    border-radius: 2%;
+    margin-bottom: 20px; 
+    margin-right: 0px;
+    transition: 0.5s;
+
+}
+
+.submit{
+    width: 50px;
+    height: 40px;
+    background-color: rgb(34, 32, 32);
+    border: 0px solid #fff;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px; 
+    transition: 0.5s;
+
+}
+
+.container div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchbox:hover{
+    background-color: rgb(51, 46, 46);
+}
+.submit:hover{
+    background-color: rgb(51, 46, 46);
+}
+
+.sidebar{
+    background-color: rgb(51, 46, 46);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+
+}
+
+.sidebar a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sidebar a img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(26, 24, 24, 0.3);
+}
+
+.sidebar-btns{
+    position: absolute;
+    max-width: 400px;
+    color: white;
+    gap: 15px;
+}
+
+
+.bottombar-btn {
+    max-width: 400px;
+    height: 80px;
+    background-color: rgb(35, 32, 32);
+    position: absolute;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sidebar-close{
+    height: 5%; 
+    width:  2%; 
+    background-color:transparent;
+    border: none; 
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2%;
+    position: absolute;
+    margin-top: 28.2%;
+    font-size: medium;      
+}
+
+.sidebar-open{
+    height: 5%; 
+    width:  5%; 
+    background-color: rgb(51, 46, 46);
+    border: none; 
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 2%;
+    position: absolute;
+    display: none;
+    margin-top: 28.2%;
+    font-size: large;
+}
+
+.time{
+    color: white;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip-text{
+    visibility: hidden;
+    width: max-content;
+    background-color: #353030;
+    color: #fff;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    position: absolute;
+    z-index: 1;
+    left: 125px;
+    transform: translateX(-50%);
+    opacity: 0;
+    translate: opacity 0.3s;
+}
+
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+.windowOverlay{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 20%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 250%;
+    overflow: auto;
+
+}
+
+.windowOverlayContents{
+    background-color: transparent;
+    margin: auto;
+    border: 1px solid #888;
+    width: 800px;
+    max-width: 600px;
+    overflow-y: hidden;
+    user-select: none;
+}
+
+.windowOverlayClose{
+    color: #aaaaaa;
+    float: right;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.windowIFrame{
+    width: 500px;
+    height: 744px;
+    max-width: 250%;
+    margin: 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
+    
+}
+
+.windowIFrame iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.quickButtons{
+    background-color: rgb(34, 32, 32);
+    width: 150px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.5s;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    margin-left: 0px;
+    border-radius: 10px;
+    align-content: center;
+    gap: 0;
+    justify-content: center;
+}
+
+.quickButtons:hover{
+    background-color: rgb(51, 46, 46);
+  
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.userInfo{
+    position: absolute;
+    top: 165%;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+    font-size: smaller;
+}
