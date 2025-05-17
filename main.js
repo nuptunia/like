@@ -11,9 +11,9 @@ const searchbutton = document.getElementById("searchgo");
 
 const osElement = document.getElementById("os");
 const userAGElement = document.getElementById("useragent");
-let searchEngineType = 'Google';
+let searchEngineType = 'Brave';
 
-let google_url = `https://www.google.com/search?q=`
+let search_url = `https://search.brave.com/search?q=`
 
 function openSidebar(){
     like_sidebar.style.width = "50px";
@@ -39,7 +39,7 @@ function searchEngine(){
 
         // GO !!!
     //    window.location.href = 'searchv1/search.html';
-        window.location.href = google_url + searchinfo;
+        window.location.href = search_url + searchinfo;
     }
 }   
 
