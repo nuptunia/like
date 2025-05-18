@@ -18,7 +18,9 @@ body{
 .whiteGlow{
     text-shadow: 1px 1px 10px #fff, 1px 1px 10px #fff;
 }
-
+.purpleGlow{
+    text-shadow: 1px 1px 10px rebeccapurple, 1px 1px 10px rebeccapurple;
+}
 .container{
     display: flex;
     align-items: center;
