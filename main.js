@@ -13,7 +13,9 @@ const osElement = document.getElementById("os");
 const userAGElement = document.getElementById("useragent");
 let searchEngineType = 'Brave';
 
-let search_url = `https://search.brave.com/search?q=`
+let google_url = `https://www.google.com/search?q=`
+
+let search_url = 'https://search.brave.com/search?q='
 
 function openSidebar(){
     like_sidebar.style.width = "50px";
@@ -50,9 +52,12 @@ function getDateNow(){
     return hour + ':' + minute;
 
 }
-
 function updateTime(){
     timeElement.textContent = getDateNow();
+}
+
+
+/* 
 }
 
 function openWindow(){
@@ -105,6 +110,9 @@ AppResizeHandle.addEventListener('mousedown', (event)=> {
     event.preventDefault();
     resizing = true;
 });
+
+
+*/
 
 const userAG = navigator.userAgent;
 function userAgent(){
