@@ -119,19 +119,25 @@ function userAgent(){
     return userAG.toLowerCase();
 }
 
-function osType(){
-    let os = 'Unknown';
-    
-    if(window.navigator.userAgent.indexOf("Windows NT 10.0")!= 1) os="Windows NT 10.0";
-    else if(window.navigator.userAgent.indexOf("Windows NT 11.0")!= 1) os="Windows NT 11.0";
-    else if(window.navigator.userAgent.indexOf("Windows NT 6.3")!=  1) os="Windows NT 8.1" ;
-    else if(window.navigator.userAgent.indexOf("Windows NT 6.2")!=  1) os="Windows NT 8"   ;
-    else if(window.navigator.userAgent.indexOf("Windows NT 6.1")!=  1) os="Windows NT 7"   ;
-    else if(window.navigator.userAgent.indexOf("Linux")!=  1) os="Linux"                   ;
-    else if(window.navigator.userAgent.indexOf("Mac")!=  1) os="MacOS/iOS"                 ;
-    return os;
-
-}
+function osType() {
+    const ua = navigator.userAgent;
+    const map = [
+      ["Windows NT 11.0", "Windows 11"],
+      ["Windows NT 10.0", "Windows 10"],
+      ["Windows NT 6.3",  "Windows 8.1"],
+      ["Windows NT 6.2",  "Windows 8"],
+      ["Windows NT 6.1",  "Windows 7"],
+      ["Linux",           "Linux"],
+      ["Mac",             "MacOS/iOS"]
+    ];
+  
+    for (const [token, name] of map) {
+      if (ua.includes(token)) return name;
+    }
+  
+    return "Unknown";
+  }
+  
 osElement.textContent = osType();
 userAGElement.textContent = userAgent();
 updateTime();
