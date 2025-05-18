@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Like. - nuptunia.dev">
     <title>New Tab - Like</title>
     <link href="styles.css" rel="stylesheet">
+    <meta name="description" content="Like. - nuptunia.dev">
 
 </head>
 <body style="position: relative;">
     <style>
         #waves-background{
-            width: 100%;
-            height: 152.9vh;
+            width: 250vh;
+            height: 100vh;
+            pointer-events: none;
             position: absolute;
             z-index: -1;
             overflow: hidden;
             overflow-y: hidden;
-
+            position: fixed;
+            top: 0;
+            left: 0;
         }   
     </style>
-    <div class="userInfo">
+    <div style="position: fixed" class="userInfo">
         <div id="os"></div>
         <div id="useragent"></div>
 </div>
@@ -38,9 +41,15 @@
             <input id="searchgo" type="submit" class="submit" value=">">
         </div>
 
-        <a class="quickButtons" href="https://github.com">Github</a>
-        <a class="quickButtons" href="https://youtube.com">YouTube</a>
-
+        <a class="quickButtons" href="https://github.com" >
+            Github
+            <img style="width: 32px; height: 32px;" src="static/images/github.png" alt="github">
+        </a>
+        <a class="quickButtons" href="https://youtube.com">YouTube
+            <img style="width: 32px; height: 32px;" src="static/images/youtube.png" alt="github">
+        </a>
+        <a style="font-size: small;" class="quickButtons" href="/download">Add like as new tab
+        </a>
     </div>
 
     <div id="like_sidebar" class="sidebar">
@@ -73,7 +82,7 @@
             el: "#waves-background",
             color: 0x000000,
             shininess: 50,
-            waveHeight: 20,
+            waveHeight: 50,
             waveSpeed: 0.5,
             zoom: 1
         });
